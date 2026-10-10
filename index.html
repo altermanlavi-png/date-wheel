@@ -82,6 +82,8 @@
   :root[data-theme="dark"] { --veil-top: rgba(26, 14, 20, .4); --blush: rgba(210, 74, 111, .25); --veil: rgba(26, 14, 20, .72); --glass: rgba(38, 21, 29, .86); }
   body { background: radial-gradient(120% 70% at 50% 0%, var(--blush), transparent 70%), var(--bg); min-height: 100%; }
   .photo { position: fixed; inset: 0; z-index: 0; background: 50% 40% / cover no-repeat; pointer-events: none; }
+  /* on a wide screen the portrait photo is shown whole, full height, in the middle, instead of zoomed to the screen's width */
+  @media (min-aspect-ratio: 4/5) { .photo { background-size: auto 100%; background-position: 50% 50%; } }
   .photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, var(--veil-top), var(--veil) 45%, var(--bg) 95%); }
   .hearts { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
   .hearts span { position: absolute; bottom: -40px; color: var(--rose); opacity: 0; animation: rise linear infinite; }
