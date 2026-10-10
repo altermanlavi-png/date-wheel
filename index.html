@@ -33,6 +33,9 @@
     --bg: #1a0e14; --surface: #26151d; --line: #3d2530; --fg: #f7e9ec; --muted: #b997a4;
     --wine: #d24a6f; --rose: #ef7f93; --peach: #f2a98b; --gold: #e2b356; --plum: #8e4f7d; --shadow: 0 10px 30px rgba(0,0,0,.4); color-scheme: dark; }
   * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html, body { margin: 0; padding: 0; }
+  img { max-width: 100%; }
   body { background: var(--bg); color: var(--fg); font: 400 17px/1.5 var(--body); direction: rtl; }
   .wrap { max-width: 560px; margin: 0 auto; padding-block: 22px 48px; padding-inline: 16px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; }
   .wrap > * { min-width: 0; }
